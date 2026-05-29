@@ -10,4 +10,4 @@ Files of each Day contain in
 
 
 
-**If any Cocerns should Arise with the REPO or Code please contact in Slack Aditya Dash or Email: Adityakumar.Dash@ibm.com**
+**If any Concerns should Arise with the REPO or Code please contact in Slack Aditya Dash or Email: Adityakumar.Dash@ibm.com**
