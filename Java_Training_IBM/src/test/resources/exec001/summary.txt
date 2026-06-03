@@ -1,0 +1,12 @@
+Log Summary Report
+------------------
+Total Entries: 3
+INFO: 2
+WARN: 0
+ERROR: 1
+
+Error Messages:
+- Failed to connect to database
+
+Earliest Timestamp: 2024-05-10T09:00
+Latest Timestamp: 2024-05-10T09:02
