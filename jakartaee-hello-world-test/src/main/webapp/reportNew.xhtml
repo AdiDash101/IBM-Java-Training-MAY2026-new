@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html"
+      xmlns:f="jakarta.faces.core"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <title>New Report</title>
+    <link rel="stylesheet" href="https://unpkg.com/primeflex@latest/primeflex.css" />
+    <style>
+        body { background-color: #f5f5f5; font-family: system-ui, sans-serif; margin: 0; padding: 0; }
+        .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 2rem; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .header h2 { margin: 0; font-size: 1.8rem; font-weight: 600; }
+        .container { max-width: 600px; margin: 2rem auto; padding: 0 1rem; }
+        .card { background: white; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); padding: 2rem; }
+        .field-group { margin-bottom: 1.5rem; }
+    </style>
+</h:head>
+<h:body>
+    <div class="header">
+        <div class="container">
+            <h2>Create New Report</h2>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <h:form id="addForm">
+    <f:metadata>
+        <f:viewParam name="id" value="#{reportEditBean.id}" />
+        <f:viewAction action="#{reportEditBean.loadData}" />
+    </f:metadata>
+
+    <div class="field-group flex flex-column gap-2">
+        <p:outputLabel for="title" value="Title" styleClass="font-semibold" />
+        <p:inputText id="title" value="#{reportEditBean.report.title}" required="true" styleClass="w-full" />
+    </div>
+
+    <div class="field-group flex flex-column gap-2">
+        <p:outputLabel for="detail" value="Detail" styleClass="font-semibold" />
+        <p:inputTextarea id="detail" value="#{reportEditBean.report.detail}" rows="5" styleClass="w-full" />
+    </div>
+
+    <div class="flex justify-content-end gap-2 mt-4">
+        <p:button value="Cancel" outcome="reportList.xhtml" styleClass="p-button-outlined p-button-secondary" />
+        <p:commandButton value="Save" action="#{reportEditBean.save}" styleClass="p-button-success" />
+    </div>
+</h:form>
+        </div>
+    </div>
+</h:body>
+</html>
